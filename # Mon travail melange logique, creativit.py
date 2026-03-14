@@ -1,6 +1,7 @@
 # Mon travail melange logique, creativite et organisation. Qui suis-je ?
 # Merci de ne pas descendre voir le code avant d'avoir repondu a la quesion dans le terminal
-
+print("Mon travail melange logique, creativite et organisation. Qui suis-je ?")
+print("Merci de ne pas descendre voir le code avant d'avoir repondu a la quesion dans le terminal")
 
 
 
