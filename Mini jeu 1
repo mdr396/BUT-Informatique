@@ -1,1 +1,116 @@
+print("What is your name?" )
+Max = input()
+
+class Personnage:
+    def __init__(self,nom,vie):
+        self.nom = nom
+        self.vie = vie
+    def attaquer(self,cible,degats):
+        cible.vie -= degats
+
+Max1 = Personnage("Max",200)
+Boss = Personnage("Boss",120)
+
+r= ""
+Elon_Musk = "Elon Musk"
+Steve_Jobs="Steve Jobs"
+south_pole="south pole"
+python = "python"
+linux = "linux"
+sql = "sql"
+
+print("You have 3 chances to answer the questions.")
+print("I am the person who manage the company Tesla. Who am-I?")
+
+for k in range (3):
+    if r != Elon_Musk:
+        r = input()
+if r == Elon_Musk:
+    Max1.attaquer(Boss,40)
+    print("Boss PV:" , Boss.vie)
+else:
+    Boss.attaquer(Max1,20)    
+    print("You've lost 20 PV. PV:" ,  Max1.vie)
+    
+
+print("Who was the ceo of Apple when the first Iphone was released?")
+n = ""
+for k in range(3):
+    if n != Steve_Jobs:
+        n = input()
+    else:   
+        break   
+if Steve_Jobs == n:
+    Max1.attaquer(Boss,40)
+    print("Boss PV:" , Boss.vie , "Damage: 40")
+else:
+    Boss.attaquer(Max1,40)
+    print("You've lost 40 PV. PV:" ,  Max1.vie)
+
+print("Antarctic is on north pole or south pole?")
+l= ""
+for k in range(3):
+    if l != south_pole:
+        l = input()
+    else:   
+        break   
+if l == south_pole:
+    Max1.attaquer(Boss,40)
+    print("Boss PV:" , Boss.vie , "Damage: 40")
+else:
+    Boss.attaquer(Max1,20)
+    print("You've lost 20 PV. PV:" ,  Max1.vie)
+
+
+print("Which programming language is often considered easy for beginners to learn?")
+
+for k in range(3):
+    if r != python:
+        r = input()
+    else:
+        break   
+if r == python:
+    Max1.attaquer(Boss,40)
+    print("Boss PV:" , Boss.vie , "Damage: 40")
+else:
+    Boss.attaquer(Max1,20)
+    print("You've lost 20 PV. PV:" ,  Max1.vie)
+
+
+print("I am a operating system using by cloud engineer to manage the serveurs.")
+
+for k in range(3):
+    if r != linux:
+        r = input()
+    else:
+        break   
+if r == linux:
+    Max1.attaquer(Boss,40)
+    print("Boss , PV:" , Boss.vie , "Damage: 40")
+else:
+    Boss.attaquer(Max1,20)
+    print("You've lost 20 PV:" ,  Max1.vie)
+
+print("Wish informatic language is the most use for database ?")
+
+if Max1.vie <= 0:
+    print("You lose.")
+else:
+    for k in range(3):
+        if r != sql:
+         r = input()
+        else:
+            break
+    if r == sql:
+        Max1.attaquer(Boss,40)
+        print("Boss , PV:" , Boss.vie , "Damage: 40")
+    else:
+        Boss.attaquer(Max1,20)
+        print("You've lost 20", Max , "PV=" ,  Max1.vie)
+if Boss.vie <= 0:
+    print(Max , "Congratulation !!! You win")
+else:
+    print(Max ,"Nice try")
+
+
 
